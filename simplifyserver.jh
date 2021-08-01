@@ -1,0 +1,35 @@
+entity Slip {
+	Date Instant
+    Tbgr Long
+    Grade String
+    Lotno Long
+    Weight Double
+    Price Double
+}
+
+entity Tbgr {
+	Board String
+    Village String
+    Tbgr Long
+    Name String
+}
+
+entity Board {
+    Board String
+}
+
+entity Contact{
+	Name String
+    Phone Long
+}
+
+entity Grade {
+    Grade String
+}
+
+entity Village{
+	Board String
+    Village String
+}
+
+service all with serviceImpl
