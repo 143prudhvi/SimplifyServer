@@ -48,6 +48,12 @@ public class CacheConfiguration {
             createCache(cm, com.prudhvi.simplify.domain.User.class.getName());
             createCache(cm, com.prudhvi.simplify.domain.Authority.class.getName());
             createCache(cm, com.prudhvi.simplify.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.prudhvi.simplify.domain.Slip.class.getName());
+            createCache(cm, com.prudhvi.simplify.domain.Tbgr.class.getName());
+            createCache(cm, com.prudhvi.simplify.domain.Board.class.getName());
+            createCache(cm, com.prudhvi.simplify.domain.Contact.class.getName());
+            createCache(cm, com.prudhvi.simplify.domain.Grade.class.getName());
+            createCache(cm, com.prudhvi.simplify.domain.Village.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

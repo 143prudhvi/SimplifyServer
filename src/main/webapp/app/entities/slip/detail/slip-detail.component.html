@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="slip">
+      <h2 data-cy="slipDetailsHeading"><span>Slip</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span>ID</span></dt>
+        <dd>
+          <span>{{ slip.id }}</span>
+        </dd>
+        <dt><span>Date</span></dt>
+        <dd>
+          <span>{{ slip.date | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span>Tbgr</span></dt>
+        <dd>
+          <span>{{ slip.tbgr }}</span>
+        </dd>
+        <dt><span>Grade</span></dt>
+        <dd>
+          <span>{{ slip.grade }}</span>
+        </dd>
+        <dt><span>Lotno</span></dt>
+        <dd>
+          <span>{{ slip.lotno }}</span>
+        </dd>
+        <dt><span>Weight</span></dt>
+        <dd>
+          <span>{{ slip.weight }}</span>
+        </dd>
+        <dt><span>Price</span></dt>
+        <dd>
+          <span>{{ slip.price }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/slip', slip.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
